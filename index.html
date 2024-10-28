@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Carreras</title>
+    <link rel="stylesheet" href="./styles/styles.scss">
+</head>
+<body class="body">
+    <div class="main-screen" id="main-screen">
+        <h1 class="main-screen__title">Juego de carreras</h1>
+        <p class="main-screen__description">Para comenzar el juego deben haber al menos 2 jugadores y máximo 5 jugadores.</p>
+         <div class="main-screen__player-section">
+            <form class="main-screen__player-form" id="player-form" aria-label="Formulario para agregar jugadores">
+                <label for="nickname" class="sr-only">Ingrese su nickname</label>
+                <input type="text" id="nickname" class="main-screen__input" placeholder="Ingrese su nickname" required>
+                
+                <label for="car-select" class="sr-only">Selecciona un carro</label>
+                <select id="car-select" class="main-screen__select" aria-label="Selecciona un carro">
+                    <option value="🚗">🚗 Auto rojo</option>
+                    <option value="🏎️">🏎️ Deportivo</option>
+                    <option value="🚙">🚙 SUV</option>
+                    <option value="🚘">🚘 Coupé</option>
+                    <option value="🚌">🚌 Autobús</option>
+                </select>
+                
+                <button type="submit" class="main-screen__button">Agregar Jugador</button>
+            </form>
+    
+            <div class="main-screen__player-list" id="player-list" aria-live="polite" aria-atomic="true"></div>
+         </div>       
+       
+        <button id="start-game" class="main-screen__start-button" style="display:none;">Iniciar Juego</button>
+    </div>
+    
+    <div class="game-screen" id="game-screen" style="display: none;">
+        <div id="countdown-timer" class="countdown" aria-live="assertive"></div>
+        <div id="track" class="track"></div>
+        <div id="assigned-keys"></div>
+        <div id="podium" class="podium" style="display: none;"></div>
+    </div>
+    
+    <script src="./src/main.ts" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+@use './variables' as var;
+@use './mixins' as mix;
+
+.main-screen {
+    background-color: var.$color-purple;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+    justify-items: center;
+
+    &__title {
+        @include mix.title-style;
+    }
+
+    &__description {
+        font-size: var.$font-size-medium;
+    }
+
+    &__player-section {
+        gap: 72px;
+        justify-content: center;
+        width: 100%;
+        @include mix.flex(row);
+    }
+
+    &__player-list {
+        margin: 20px 0;
+        gap: 20px;
+        align-items: self-end;
+        @include mix.flex;
+    }
+
+    &__player-form {
+        padding-block: 1rem;
+        gap: 10px;
+        display: flex;
+        margin-bottom: 20px;
+        flex-direction: column;
+        text-align: left;
+        justify-self: center;
+        width: 20%;
+    }
+
+    &__input,
+    &__select {
+        font-size: var.$font-size-small;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    &__start-button,
+    &__button {
+        @include mix.button-style(var.$color-orange);
+    }
+}
+
+.remove-player-btn {
+    @include mix.button-style(var.$color-red);
+}

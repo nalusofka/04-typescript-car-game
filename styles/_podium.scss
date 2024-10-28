@@ -1,0 +1,12 @@
+@use './variables' as var;
+@use './mixins' as mix;
+
+.podium {
+    margin-top: 20px;
+    justify-items: center;
+    @include mix.title-style;
+}
+
+.restart-button {
+    @include mix.button-style(var.$color-orange);
+}

@@ -1,0 +1,30 @@
+@use './variables' as var;
+@import url('https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap');
+
+@mixin title-style {
+    font-size: var.$font-size-xxxlarge;
+    color: var.$color-orange;
+    font-family: "Jolly Lodger";
+}
+
+@mixin flex($flex-direction: column) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: center;
+}
+
+@mixin input-style {
+    font-size: var.$font-size-small;
+    margin: 5px;
+    padding: 10px;
+}
+
+@mixin button-style($background-color) {
+    background-color: $background-color;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: var.$font-size-small;
+    font-weight: var.$font-weight-bold;
+    padding: 10px 15px;
+}

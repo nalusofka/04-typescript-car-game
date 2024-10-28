@@ -1,0 +1,25 @@
+@use './variables' as var;
+
+.game-screen {
+    background-color: var.$color-purple;
+    height: 100vh;
+    padding: 20px;
+}
+
+.track {
+    background: var.$color-purple url("../assets/images/carretera.webp") repeat 100%;
+    height: 287px;
+    overflow: hidden;
+    padding-inline: 500px;
+    position: relative;
+    width: 100%;
+}
+
+.car {
+    border-radius: 5px; 
+    font-size: 40px; 
+    line-height: 30px; 
+    position: absolute; 
+    text-align: center;
+    transform: scaleX(-1);
+}

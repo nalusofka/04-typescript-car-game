@@ -1,0 +1,6 @@
+@use './variables' as var;
+
+.countdown {
+    font-size: var.$font-size-xlarge;
+    margin-bottom: 20px;
+}
